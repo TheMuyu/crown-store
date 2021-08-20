@@ -7,9 +7,17 @@
   
     .logo-container {
       height: 100%;
-      width: 70px;
-      padding: 25px;
+      width: 200px;
+      padding: 5px;
+      margin-left: 20px;
     }
+
+    .title {
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+
   
     .options {
       width: 50%;

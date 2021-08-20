@@ -2,16 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
-import Logo from './../../assets/crown.svg'
+import { ReactComponent as Logo } from './../../assets/crown.svg'
 
 const Header = () => {
     return (
         <div className='header'>
             <Link className='logo-container' to='/'>
-                <div className="logo">
-                    <img src={Logo} alt="Crown Store" />
-                </div>
+                <Logo className='logo'/>
+                <span className='title'>CROWN STORE | CLOTHING</span>
             </Link>
+            
             <div className="options">
                 <Link className="option" to='/shop'>
                     SHOP
