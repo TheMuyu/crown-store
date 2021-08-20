@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Login.scss'
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
@@ -16,9 +16,12 @@ const Login = () => {
     };
 
     const handleChange = event => {
-        const { value, name } = event.target;
 
-        this.setState({ [name]: value });
+        const { value, name } = event.target;
+        setState(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
     };
 
     return (
