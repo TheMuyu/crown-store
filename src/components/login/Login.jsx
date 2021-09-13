@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Login.scss'
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
+import { signInWithGoogle } from '../../firebase/FirebaseUtils';
 
 const Login = () => {
     const [state, setState] = useState({
@@ -46,7 +47,10 @@ const Login = () => {
                     label='password'
                     required
                 />
-                <CustomButton type='submit'> Sign in </CustomButton>
+                <div className="buttons">
+                    <CustomButton type='submit'> Sign in </CustomButton>
+                    <CustomButton onClick={signInWithGoogle} isGoogle> Sign in with Google </CustomButton>
+                </div>
             </form>
         </div>
     )
